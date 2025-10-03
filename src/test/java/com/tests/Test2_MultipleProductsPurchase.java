@@ -28,10 +28,11 @@ public class Test2_MultipleProductsPurchase extends BaseTest {
         checkout.checkoutCompletePage();
     }
 
+    @Test(priority = 4)
+    public  void Logout(){
+        logout.LogoutApplication();
 
-
-
-
+    }
 
 
 }
