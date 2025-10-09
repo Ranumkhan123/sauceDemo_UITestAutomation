@@ -20,7 +20,7 @@ public class AddtoCartPage {
 
     // Locators
     By productHeader = By.id("back-to-products");
-    By productItem = By.xpath("//*[@id=\"item_4_title_link\"]");
+    By productItem = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div");
     By addToCartButton = By.id("add-to-cart");
     By removeButton = By.id("remove");
     By cartIcon = By.xpath("//*[@id=\"shopping_cart_container\"]/a");

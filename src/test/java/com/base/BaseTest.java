@@ -1,5 +1,7 @@
 package com.base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,10 +9,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pages.*;
+import utils.ExtentReportManager;
 
 public class BaseTest {
     protected WebDriver driver;
@@ -19,6 +20,15 @@ public class BaseTest {
     protected CheckoutPage checkout;
     protected LogoutPage logout;
     protected addProductsToCartPage addProductsToCart;
+    protected static ExtentReports extent;
+    protected static ExtentTest test;
+
+
+    @BeforeSuite
+    public void startReport() {
+        extent = ExtentReportManager.getReportInstance();
+    }
+
 
     @BeforeTest
     @Parameters("browser")
@@ -55,6 +65,14 @@ public class BaseTest {
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+        }
+    }
+
+
+    @AfterSuite
+    public void endReport() {
+        if (extent != null) {
+            extent.flush();
         }
     }
 }
