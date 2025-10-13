@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,6 +20,7 @@ public class CheckoutPage {
 
     WebDriver driver;
     WebDriverWait wait;
+
 
     //Locators
     By cartpageHeaderVerify = By.className("header_secondary_container");
@@ -95,8 +97,9 @@ public class CheckoutPage {
 
     public void completeCheckout(){
 
+        //wait for continue button visible
+        WebElement clickContinueBtn = wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
         //click on continue button
-        WebElement clickContinueBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(continueBtn));
         clickContinueBtn.click();
 
         //chekout overview page

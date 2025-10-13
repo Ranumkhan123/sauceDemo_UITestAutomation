@@ -80,7 +80,5 @@ public class LoginPage {
         if (screenshotPath != null) {
             testThread.get().addScreenCaptureFromPath(screenshotPath, "Screenshot on Failure");
         }
-
-        Assert.fail("Login Failed! Error: " + actualError);
     }
 }

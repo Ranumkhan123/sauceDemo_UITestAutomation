@@ -3,22 +3,22 @@ package com.tests;
 import com.base.BaseTest;
 import org.testng.annotations.Test;
 
-public class Tests1_SingleProductPurchase extends BaseTest {
+public class Tests3_LoginUser_OtherUser extends BaseTest {
 
-    @Test(priority = 1, retryAnalyzer = utils.RetryAnalyzer.class)
+    @Test(priority = 1)
     public void Login() {
         test = extent.createTest("Login Test");
         loginPage.openBrowser("https://www.saucedemo.com/");
-        loginPage.loginApplication("standard_user", "secret_sauce");
+        loginPage.loginApplication("error_user", "secret_sauce");
     }
 
-    @Test(priority = 2, retryAnalyzer = utils.RetryAnalyzer.class)
+    @Test(priority = 2)
     public void AddtoCart() {
         test = extent.createTest("Add to Cart Test");
         addtocart.productAddtoCart();
     }
 
-    @Test(priority = 3, retryAnalyzer = utils.RetryAnalyzer.class)
+    @Test(priority = 3)
     public void CheckOut() {
         test = extent.createTest("Checkout Test");
         checkout.clickCheckout();
@@ -27,7 +27,7 @@ public class Tests1_SingleProductPurchase extends BaseTest {
         checkout.checkoutCompletePage();
     }
 
-    @Test(priority = 4, retryAnalyzer = utils.RetryAnalyzer.class)
+    @Test(priority = 4)
     public void Logout() {
         test = extent.createTest("Logout Test");
         logout.LogoutApplication();
