@@ -14,7 +14,7 @@ import pages.*;
 import utils.ExtentReportManager;
 
 public class BaseTest {
-    protected WebDriver driver;
+    public WebDriver driver;
     protected LoginPage loginPage;
     protected AddtoCartPage addtocart;
     protected CheckoutPage checkout;
