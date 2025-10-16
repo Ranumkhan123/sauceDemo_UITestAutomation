@@ -1,4 +1,4 @@
-package com.tests;
+package com.tests.Positive;
 
 import com.base.BaseTest;
 import org.testng.annotations.Test;

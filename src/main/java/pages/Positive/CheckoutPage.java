@@ -1,7 +1,6 @@
-package pages;
+package pages.Positive;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,14 +11,16 @@ import java.time.Duration;
 
 public class CheckoutPage {
 
+
+    public WebDriver driver;
+    public WebDriverWait wait;
+
     // Constructor
     public CheckoutPage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    WebDriver driver;
-    WebDriverWait wait;
 
 
     //Locators

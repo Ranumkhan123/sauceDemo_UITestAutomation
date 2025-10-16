@@ -10,22 +10,44 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
-import pages.*;
+import pages.LogoutfromAnyPage;
+import pages.Negative.CheckoutErrorMessagesForEmptyFields;
+import pages.Negative.InvalidLogin;
+import pages.Negative.InvalidPassword;
+import pages.Positive.*;
 import utils.ExtentReportManager;
 
+
+
+
+
 public class BaseTest {
+
+
     public WebDriver driver;
     protected LoginPage loginPage;
     protected AddtoCartPage addtocart;
     protected CheckoutPage checkout;
     protected LogoutPage logout;
     protected addProductsToCartPage addProductsToCart;
+    protected productVerification productverification;
+    protected LogoutfromHomePage logoutfromhomepage;
+    protected CartItemsVerification cartitemsverification;
+    protected MultipleCartItemVerification multiplecartitemverification;
+    protected InvalidLogin invalidlogin;
+    protected InvalidPassword invalidpassword;
+    protected CheckoutErrorMessagesForEmptyFields checkoutwithemptyfields;
+    protected LogoutfromAnyPage logoutfromanypage;
+
     protected static ExtentReports extent;
     protected static ExtentTest test;
 
 
+
+
     @BeforeSuite
     public void startReport() {
+
         extent = ExtentReportManager.getReportInstance();
     }
 
@@ -52,12 +74,23 @@ public class BaseTest {
             throw new IllegalArgumentException("Browser not supported: " + browser);
         }
 
-        // ✅ Initialize all page objects AFTER driver is ready
+        // Initialize all page objects AFTER driver is ready
         loginPage = new LoginPage(driver);
         addtocart = new AddtoCartPage(driver);
         checkout = new CheckoutPage(driver);
         logout = new LogoutPage(driver);
         addProductsToCart = new addProductsToCartPage(driver);
+        productverification = new productVerification(driver);
+        logoutfromhomepage = new LogoutfromHomePage(driver);
+        cartitemsverification = new CartItemsVerification(driver);
+        multiplecartitemverification = new MultipleCartItemVerification(driver);
+        invalidlogin = new InvalidLogin(driver);
+        invalidpassword = new InvalidPassword(driver);
+        checkoutwithemptyfields = new CheckoutErrorMessagesForEmptyFields(driver);
+        logoutfromanypage = new LogoutfromAnyPage(driver);
+
+
+
     }
 
 

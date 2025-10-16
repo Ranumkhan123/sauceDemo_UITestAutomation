@@ -1,4 +1,4 @@
-package pages;
+package pages.Positive;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,8 +13,9 @@ import java.util.List;
 
 public class addProductsToCartPage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    public WebDriver driver;
+    public WebDriverWait wait;
+
 
     // Constructor
     public addProductsToCartPage(WebDriver driver){

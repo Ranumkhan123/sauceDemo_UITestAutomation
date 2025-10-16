@@ -1,4 +1,4 @@
-package pages;
+package pages.Positive;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,8 +11,9 @@ import java.time.Duration;
 
 public class LogoutPage {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+
+    public WebDriver driver;
+    public WebDriverWait wait;
 
     // Constructor
     public LogoutPage(WebDriver driver){

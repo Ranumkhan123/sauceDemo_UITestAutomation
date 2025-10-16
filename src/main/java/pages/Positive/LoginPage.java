@@ -1,4 +1,4 @@
-package pages;
+package pages.Positive;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,8 +15,9 @@ import java.time.Duration;
 
 public class LoginPage {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+
+    public WebDriver driver;
+    public WebDriverWait wait;
 
     // Constructor
     public LoginPage(WebDriver driver){
@@ -40,8 +41,8 @@ public class LoginPage {
         return this;
     }
 
-    public void loginApplication(String username, String password) {
 
+    public void loginApplication(String username, String password) {
         WebElement userField = wait.until(ExpectedConditions.visibilityOfElementLocated(userName));
         WebElement passField = wait.until(ExpectedConditions.visibilityOfElementLocated(standardPassword));
         WebElement loginBtn = wait.until(ExpectedConditions.elementToBeClickable(loginButton));

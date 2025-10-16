@@ -12,23 +12,18 @@ import java.util.Date;
 
 public class ScreenshotUtils {
 
-        public static String captureScreenshot(WebDriver driver, String testName) {
-            try {
-                String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-                String screenshotDir = "test-output/screenshots/";
-                new File(screenshotDir).mkdirs(); // Create folder if not exist
-
-                String filePath = screenshotDir + testName + "_" + timestamp + ".png";
-
-                File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                Files.copy(srcFile.toPath(), new File(filePath).toPath());
-
-                return filePath;
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
+    public static String captureScreenshot(WebDriver driver, String screenshotName) {
+        try {
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            String destPath = System.getProperty("user.dir") + "/screenshots/" + screenshotName + "_" + timestamp + ".png";
+            File destFile = new File(destPath);
+            Files.createDirectories(destFile.getParentFile().toPath());
+            Files.copy(srcFile.toPath(), destFile.toPath());
+            return destPath;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
+    }
 }
-
-

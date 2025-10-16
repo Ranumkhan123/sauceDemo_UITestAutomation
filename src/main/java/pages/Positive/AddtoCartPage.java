@@ -1,4 +1,4 @@
-package pages;
+package pages.Positive;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,8 +9,8 @@ import java.time.Duration;
 
 public class AddtoCartPage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    public WebDriver driver;
+    public WebDriverWait wait;
 
     // Constructor
     public AddtoCartPage(WebDriver driver){

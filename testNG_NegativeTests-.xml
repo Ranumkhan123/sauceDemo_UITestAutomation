@@ -9,27 +9,79 @@
     <test name="Test_1-Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.tests.Tests3_LoginUser_OtherUser"/>
+            <class name="com.tests.Negative.Tests1_InvalidLogin"/>
         </classes>
     </test>
-
-
 
     <test name="Test_1-Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.tests.Tests3_LoginUser_OtherUser"/>
+            <class name="com.tests.Negative.Tests1_InvalidLogin"/>
         </classes>
     </test>
-
-
 
     <test name="Test_1-Edge">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="com.tests.Tests3_LoginUser_OtherUser"/>
+            <class name="com.tests.Negative.Tests1_InvalidLogin"/>
         </classes>
     </test>
+
+
+ 
+
+
+    <test name="Test_2-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Negative.Tests2_LoginwithInvalidPassword"/>
+        </classes>
+    </test>
+
+    <test name="Test_2-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Negative.Tests2_LoginwithInvalidPassword"/>
+        </classes>
+    </test>
+
+    <test name="Test_2-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Negative.Tests2_LoginwithInvalidPassword"/>
+        </classes>
+    </test>
+
+
+
+    <test name="Test_3-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Negative.Tests3_CheckoutErrorMessagesForEmptyFields"/>
+        </classes>
+    </test>
+
+    <test name="Test_3-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Negative.Tests3_CheckoutErrorMessagesForEmptyFields"/>
+        </classes>
+    </test>
+
+    <test name="Test_3-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Negative.Tests3_CheckoutErrorMessagesForEmptyFields"/>
+        </classes>
+    </test>
+
+
+
+
+
+
+
+
 
 
 

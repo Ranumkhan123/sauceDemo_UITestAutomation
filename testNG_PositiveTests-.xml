@@ -9,48 +9,121 @@
     <test name="Test_1-Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.tests.Tests1_EndtoEndFlow_SingleProduct"/>
+            <class name="com.tests.Positive.Tests1_EndtoEndFlow_SingleProduct"/>
         </classes>
     </test>
-
-    <test name="Test_2-Chrome">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="com.tests.Tests2_EndtoEndFlow_MultipleProducts"/>
-        </classes>
-    </test>
-
-
 
     <test name="Test_1-Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.tests.Tests1_EndtoEndFlow_SingleProduct"/>
+            <class name="com.tests.Positive.Tests1_EndtoEndFlow_SingleProduct"/>
+        </classes>
+    </test>
+
+    <test name="Test_1-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Positive.Tests1_EndtoEndFlow_SingleProduct"/>
+        </classes>
+    </test>
+
+
+
+
+    <test name="Test_2-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Positive.Tests2_EndtoEndFlow_MultipleProducts"/>
         </classes>
     </test>
 
     <test name="Test_2-Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.tests.Tests2_EndtoEndFlow_MultipleProducts"/>
-        </classes>
-    </test>
-
-
-
-    <test name="Test_1-Edge">
-        <parameter name="browser" value="edge"/>
-        <classes>
-            <class name="com.tests.Tests1_EndtoEndFlow_SingleProduct"/>
+            <class name="com.tests.Positive.Tests2_EndtoEndFlow_MultipleProducts"/>
         </classes>
     </test>
 
     <test name="Test_2-Edge">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="com.tests.Tests2_EndtoEndFlow_MultipleProducts"/>
+            <class name="com.tests.Positive.Tests2_EndtoEndFlow_MultipleProducts"/>
         </classes>
     </test>
+
+
+
+    <test name="Test_3-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Positive.Tests3_VerifyCartItems"/>
+        </classes>
+    </test>
+
+    <test name="Test_3-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Positive.Tests3_VerifyCartItems"/>
+        </classes>
+    </test>
+
+    <test name="Test_3-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Positive.Tests3_VerifyCartItems"/>
+        </classes>
+    </test>
+
+
+
+    <test name="Test_4-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Positive.Tests4_CartItemsVerification"/>
+        </classes>
+    </test>
+
+    <test name="Test_4-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Positive.Tests4_CartItemsVerification"/>
+        </classes>
+    </test>
+
+    <test name="Test_4-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Positive.Tests4_CartItemsVerification"/>
+        </classes>
+    </test>
+
+
+
+
+    <test name="Test_5-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Positive.Tests5_VerifyProductsDetails"/>
+        </classes>
+    </test>
+
+    <test name="Test_5-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Positive.Tests5_VerifyProductsDetails"/>
+        </classes>
+    </test>
+
+    <test name="Test_5-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Positive.Tests5_VerifyProductsDetails"/>
+        </classes>
+    </test>
+
+
+
+
 
 
 </suite>
