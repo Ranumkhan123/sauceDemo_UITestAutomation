@@ -20,39 +20,16 @@ The framework follows the Page Object Model (POM) design and generates rich Exte
 
 ---
 
-## Project Structure
-
-SauceDemo-UIAutomation/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── base/             # Browser and test setup
-│   │   │   │   ├── pages/            # Page Object classes (Positive / Negative)
-│   │   │   │   └── utils/            # Extent reports, screenshot, and helper classes
-│   │   └── resources/                # Configuration or driver-related files
-│   └── test/
-│       └── java/
-│           └── com/tests/            # Test classes for Positive & Negative flows
-│
-├── testng_positive.xml               # Positive test suite configuration
-├── testng_negative.xml               # Negative test suite configuration
-├── pom.xml                           # Maven dependencies and plugins
-└── README.md                         # Project documentation
-
-
----
 
 ## Tools & Technologies Used
 
-Java (17 or higher) - Programming language
-Selenium WebDriver - Browser automation
-TestNG - Test framework for managing test cases
-Maven - Build and dependency management
-Extent Reports - HTML-based detailed reporting
-WebDriverManager - Auto management of browser drivers
-IntelliJ IDEA – Integrated Development Environment (IDE) for writing, running, and debugging tests
+- Java (17 or higher) - Programming language
+- Selenium WebDriver - Browser automation
+- TestNG - Test framework for managing test cases
+- Maven - Build and dependency management
+- Extent Reports - HTML-based detailed reporting
+- WebDriverManager - Auto management of browser drivers
+- IntelliJ IDEA – Integrated Development Environment (IDE) for writing, running, and debugging tests
 
 
 ---
