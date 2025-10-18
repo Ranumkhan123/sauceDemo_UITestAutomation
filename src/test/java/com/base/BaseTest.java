@@ -15,12 +15,10 @@ import pages.Negative.CheckoutErrorMessagesForEmptyFields;
 import pages.Negative.InvalidLogin;
 import pages.Negative.InvalidPassword;
 import pages.Positive.*;
-import utils.ExtentReportManager;
+import utils.ExtentListener;
 
 
-
-
-
+@Listeners(ExtentListener.class)
 public class BaseTest {
 
 
@@ -39,17 +37,24 @@ public class BaseTest {
     protected CheckoutErrorMessagesForEmptyFields checkoutwithemptyfields;
     protected LogoutfromAnyPage logoutfromanypage;
 
-    protected static ExtentReports extent;
-    protected static ExtentTest test;
-
-
+    public static ExtentReports extent;
+    public static ExtentTest test;
 
 
     @BeforeSuite
-    public void startReport() {
+    public void setupExtent() {
+        String timestamp = new java.text.SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
+        String reportPath = System.getProperty("user.dir") + "/test-output/reports/ExtentReport_" + timestamp + ".html";
 
-        extent = ExtentReportManager.getReportInstance();
+        com.aventstack.extentreports.reporter.ExtentSparkReporter spark = new com.aventstack.extentreports.reporter.ExtentSparkReporter(reportPath);
+        extent = new com.aventstack.extentreports.ExtentReports();
+        extent.attachReporter(spark);
+
+        extent.setSystemInfo("Tester", "Ranum Khan");
+        extent.setSystemInfo("Environment", "QA");
+        extent.setSystemInfo("Application", "SauceDemo");
     }
+
 
 
     @BeforeTest

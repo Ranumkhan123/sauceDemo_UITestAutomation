@@ -23,7 +23,7 @@ public class LogoutfromAnyPage {
 
     // Locators
     By menuBtn = By.xpath("//*[@id=\"menu_button_container\"]/div/div[1]/div");
-    By logoutBtn = By.cssSelector("#logout_sidebar_link");
+    By logoutBtn = By.id("logout_sidebar_link");
     By loginPage = By.id("login_button_container");
     By loginpageHeader = By.xpath("//*[@id=\"root\"]/div/div[1]");
 

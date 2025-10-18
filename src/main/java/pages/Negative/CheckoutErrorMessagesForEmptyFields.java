@@ -10,7 +10,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-import static utils.ExtentTestNGListener.testThread;
+
 
 public class CheckoutErrorMessagesForEmptyFields {
 
@@ -55,7 +55,6 @@ public class CheckoutErrorMessagesForEmptyFields {
 
         WebElement firstName = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField));
         firstName.sendKeys("Ranum");
-        testThread.get().info("Entering First Name: " + firstName);
 
 
 

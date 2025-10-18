@@ -2,7 +2,7 @@
 <suite name="saucedemo_UITestAutomation">
 
     <listeners>
-        <listener class-name="utils.ExtentTestNGListener"/>
+        <listener class-name="utils.ExtentListener"/>
     </listeners>
 
 

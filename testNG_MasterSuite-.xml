@@ -125,6 +125,76 @@
 
 
 
+    <test name="Test_6-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Negative.Tests1_InvalidLogin"/>
+        </classes>
+    </test>
+
+    <test name="Test_6-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Negative.Tests1_InvalidLogin"/>
+        </classes>
+    </test>
+
+    <test name="Test_6-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Negative.Tests1_InvalidLogin"/>
+        </classes>
+    </test>
+
+
+
+
+    <test name="Test_7-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Negative.Tests2_LoginwithInvalidPassword"/>
+        </classes>
+    </test>
+
+    <test name="Test_7-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Negative.Tests2_LoginwithInvalidPassword"/>
+        </classes>
+    </test>
+
+    <test name="Test_7-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Negative.Tests2_LoginwithInvalidPassword"/>
+        </classes>
+    </test>
+
+
+
+    <test name="Test_8-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.Negative.Tests3_CheckoutErrorMessagesForEmptyFields"/>
+        </classes>
+    </test>
+
+    <test name="Test_8-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.tests.Negative.Tests3_CheckoutErrorMessagesForEmptyFields"/>
+        </classes>
+    </test>
+
+    <test name="Test_8-Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.tests.Negative.Tests3_CheckoutErrorMessagesForEmptyFields"/>
+        </classes>
+    </test>
+
+
+
 
 
 </suite>

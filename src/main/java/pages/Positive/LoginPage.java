@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import utils.ScreenshotUtils;
 
-import static utils.ExtentTestNGListener.testThread;
 import java.time.Duration;
 
 
@@ -47,13 +45,10 @@ public class LoginPage {
         WebElement passField = wait.until(ExpectedConditions.visibilityOfElementLocated(standardPassword));
         WebElement loginBtn = wait.until(ExpectedConditions.elementToBeClickable(loginButton));
 
-        testThread.get().info("Entering username: " + username);
         userField.sendKeys(username);
 
-        testThread.get().info("Entering password: " + password);
         passField.sendKeys(password);
 
-        testThread.get().info("Clicking login button");
         loginBtn.click();
 
 
@@ -75,11 +70,6 @@ public class LoginPage {
             Assert.fail("Login Failed! Error: " + actualError); // <- Important
         }
 
-        testThread.get().fail("Login Failed! Error: " + actualError);
-        // Screenshot on failure
-        String screenshotPath = ScreenshotUtils.captureScreenshot(driver, "Login_Failure");
-        if (screenshotPath != null) {
-            testThread.get().addScreenCaptureFromPath(screenshotPath, "Screenshot on Failure");
-        }
+
     }
 }
